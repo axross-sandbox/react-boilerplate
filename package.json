@@ -1,0 +1,97 @@
+{
+  "name": "boilerplate-react",
+  "version": "0.0.0",
+  "description": "Web client boilerplate using React.js.",
+  "main": "./public/index.html",
+  "scripts": {
+    "build": "$(npm bin)/gulp build",
+    "watch": "$(npm bin)/gulp watch",
+    "test": "mocha -u bdd -r ./src/client/testinit.js -R spec --compilers es6:babel/register ./src/**/__tests__/**/*.spec.es6",
+    "tdd": "$(npm bin)/mocha -w -u bdd -r ./src/client/testinit.js -R spec --compilers es6:babel/register ./src/**/__tests__/**/*.spec.es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axross/react-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "react",
+    "client",
+    "axross"
+  ],
+  "author": "axross",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axross/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/axross/react-boilerplate#readme",
+  "dependencies": {
+    "bemmer": "^0.2.1",
+    "bluebird": "^2.9.27",
+    "fastclick": "^1.0.6",
+    "isomorphic-fetch": "^2.1.0",
+    "jsdom": "^3.1.2",
+    "moment": "^2.10.3",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7",
+    "react-tappable": "^0.5.0-beta.3",
+    "reflux": "^0.2.7",
+    "sanitize.css": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babelify": "^6.1.2",
+    "browser-sync": "^2.7.6",
+    "browserify": "^9.0.8",
+    "browserify-shim": "^3.8.7",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-less": "^3.0.3",
+    "gulp-pleeease": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "gulp-watchify": "^0.5.0",
+    "mocha": "^2.2.5",
+    "watchify": "^3.2.1"
+  },
+  "externalFiles": {
+    "bluebird-2.9.26.js": {
+      "source": "./node_modules/bluebird/js/browser/bluebird.min.js"
+    },
+    "fastclick-1.0.6.js": {
+      "source": "./src/client/externals/fastclick-1.0.6.js",
+      "bundle": true
+    },
+    "isomorphic-fetch-2.1.0.js": {
+      "source": "./src/client/externals/isomorphic-fetch-2.1.0.js",
+      "bundle": true
+    },
+    "moment-2.10.3.js": {
+      "source": "./node_modules/moment/min/moment.min.js"
+    },
+    "react-0.13.3.js": {
+      "source": "./node_modules/react/dist/react.min.js"
+    },
+    "react-router-0.13.3.js": {
+      "source": "./node_modules/react-router/umd/ReactRouter.min.js"
+    },
+    "reflux-0.2.7.js": {
+      "source": "./node_modules/reflux/dist/reflux.min.js"
+    }
+  },
+  "browserify-shim": {
+    "bluebird": "global:Promise",
+    "fastlick": "global:Fastclick",
+    "moment": "global:moment",
+    "react": "global:React",
+    "react-router": "global:ReactRouter",
+    "reflux": "global:Reflux",
+    "react-tap-event-plugin": "global:injectTapEventPlugin"
+  }
+}
